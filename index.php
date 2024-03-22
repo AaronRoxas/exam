@@ -37,7 +37,7 @@
             text-decoration: none;
             color: white;
             padding: 20px;
-        
+            
         }
         
         a:hover {
@@ -85,7 +85,28 @@
             padding: 10px 0;
         }
 
+        .slide-in {
+            animation: slideIn 1s forwards;
+            opacity: 0;
+            transform: translateX(100%);
+            animation-delay: .2s;
+        }
 
+        @keyframes slideIn 
+        {
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        }
+
+
+        .slide-in-left{
+            animation: slideIn 1s forwards;
+            opacity: 0;
+            transform: translateY(-100%);
+            animation-delay: .2s;
+        }
 
 
     </style>
@@ -104,16 +125,16 @@
 
      
         <div class="contents">
-            <h1 id="landing-h1">Welcome to
+            <h1 id="landing-h1" class="slide-in-left">Welcome to
                 <span style="color:tomato;">
                 Grading<br>System
                 <hr>
                 </span></h1>
-            <p>Prelim Exam</p>   
+            <p class="slide-in-left">Prelim Exam</p>   
            
         </div> 
         <div class="img-container">
-         <img src="icon.jpg" style="border-radius: 50%;" height="350px" width="350px" alt="">
+         <img src="icon.jpg" style="border-radius: 50%;" height="350px" width="350px" alt="" class="slide-in">
             </div>
         <footer>
              <p>&COPY Copyright <b>Prelim Exam</b> All rights reserved</p>
