@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <style>
- nav {
+        nav {
             background: #0E0C0A;
             display: flex;
             justify-content: space-between;
@@ -24,12 +24,10 @@
             width: 100;
             height: 75px;
         }
-
         nav h1{
-        font-family: 'Quicksand';
-        color:white;
+            font-family: 'Quicksand';
+            color:white;
         }
-        
         ul li {
             list-style-type: none;
         }
@@ -40,7 +38,6 @@
             padding: 20px;
         
         }
-        
         a:hover {
             color: gray;
         }
@@ -52,19 +49,19 @@
         }
 
         table{
-          border-collapse: collapse;
-          display: grid;
-          place-items: center;
-          margin: 50px;          
+            border-collapse: collapse;
+            display: grid;
+            place-items: center;
+            margin: 50px;          
         }
         th{
-          background-color: #DCA789;
+            background-color: #DCA789;
         }
         th, td{
-          border: 1px solid black;
-          width: 200px;
-          padding: 10px;
-          text-align:center;
+            border: 1px solid black;
+            width: 200px;
+            padding: 10px;
+            text-align:center;
         }
         footer {
             position: fixed;
@@ -76,9 +73,7 @@
             color: black;
             padding: 10px 0;
         }
-
     </style>
-
 </head>
 <body>
 <nav>
@@ -89,16 +84,12 @@
            <li><a href="grades.php">Grading Sheet</a></li>
          </ul>
       </nav>  
-
-
     <table>
         <tr>
             <th>Student ID</th>
             <th>Student Name</th>
-            <th>Course</th>
-            
+            <th>Course</th> 
         </tr>
-        
         <?php
         //List of students
             $student = [
@@ -117,16 +108,15 @@
             // Used to print the students info in the table
             foreach ($student as $info){
                 echo"<tr>
-                <td>".$info[0]."</td>"
-                ."<td>".$info[1]."</td>".
-                "<td>".$info[2]."</td>".
-                "</tr>";
+                <td>$info[0]</td>
+                <td>$info[1]</td>
+                <td>$info[2]</td>
+                </tr>";
             }
         ?>
     </table>
     <footer>
-             <p>&COPY Copyright <b>Prelim Exam</b> All rights reserved</p>
-        </footer>
-     
+        <p>&COPY Copyright <b>Prelim Exam</b> All rights reserved</p>
+    </footer>
 </body>
 </html>

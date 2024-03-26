@@ -3,12 +3,10 @@
 <head>
 <link rel="stylesheet" href="style.css">
     <title>Home</title>
-   
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
-
         nav {
             background: #0E0C0A;
             display: flex;
@@ -25,21 +23,18 @@
         }
 
         nav h1{
-        font-family: 'Quicksand';
-        color:white;
+            font-family: 'Quicksand';
+            color:white;
         }
         
         ul li {
             list-style-type: none;
         }
-        
         a {
             text-decoration: none;
             color: white;
             padding: 20px;
-            
         }
-        
         a:hover {
             color: gray;
         }
@@ -84,14 +79,12 @@
             color: black;
             padding: 10px 0;
         }
-
         .slide-in {
             animation: slideIn 1s forwards;
             opacity: 0;
             transform: translateX(100%);
             animation-delay: .2s;
         }
-
         @keyframes slideIn 
         {
         100% {
@@ -99,16 +92,12 @@
             transform: translateX(0);
         }
         }
-
-
         .slide-in-left{
             animation: slideIn 1s forwards;
             opacity: 0;
             transform: translateY(-100%);
             animation-delay: .2s;
         }
-
-
     </style>
 
 </head>
@@ -121,9 +110,6 @@
            <li><a href="grades.php">Grading Sheet</a></li>
          </ul>
       </nav>  
-
-
-     
         <div class="contents">
             <h1 id="landing-h1" class="slide-in-left">Welcome to
                 <span style="color:tomato;">
@@ -139,7 +125,5 @@
         <footer>
              <p>&COPY Copyright <b>Prelim Exam</b> All rights reserved</p>
         </footer>
-     
-
 </body>
 </html>

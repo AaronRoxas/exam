@@ -3,7 +3,6 @@
 <head>
     <title>Gradesheet</title>
     <link rel="stylesheet" href="style.css">
-
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -73,7 +72,7 @@
             padding-top: 25px;
         }
   
-          </style>
+    </style>
 
 </head>
 <body>
@@ -84,10 +83,8 @@
            <li><a href="classlist.php">Class List</a></li>
            <li><a href="#">Grading Sheet</a></li>
          </ul>
-      </nav>  
+    </nav>  
 
-   
-    
       <table>
         <tr>
             <th>No.</th>
@@ -102,7 +99,6 @@
         </tr>
       <?php
     
-
       //Prelim Array
       $studData = [                           //PRELIM                              //Midterm               //FINALS
         ["2022-2-00001", "John Doe", "BSIT",7,10,10,10,20,14,40,40,        10,10,40,40,40,43,19,47,    10, 60, 60, 52, 40, 57],
@@ -124,15 +120,12 @@
             $quiz2 = ($grades[8]/15*60+40);
             $quiz = ($quiz1 + $quiz2)/2;
 
-
             $assign = ($grades[3]/10*60+40);
             $sw =  ($grades[4]/10*60+40);
             $sw_Ass = ($sw + $assign)/2;
 
-
             $lab1 = ($grades[5]/10*60+40);
             $lab2 = ($grades[6]/10*60+40);
-
             $lab = ($lab1 + $lab2)/2;
 
             $labExam = ($grades[9]/40*60+40);
@@ -153,7 +146,6 @@
 
             $lab3 = ($grades[13]/40*60+40);
             $lab4 = ($grades[14]/40*60+40);
-
             $lab = ($lab3 + $lab4)/2;
 
             $labExam = ($grades[17]/50*60+40);
@@ -162,16 +154,12 @@
             //Formula for getting midterm grade
             $midG = round(($sw_Ass * 0.1 ) + ($lab*0.1) + (($quiz)*0.3) + ($labExam*0.1) + ($writtenExam * .4),2);
 
-
             //FINALS SECTION
             $quiz5= ($grades[22]/60*60+40);
             $assign3 = ($grades[19]/10*60+40);
             
-
-
             $lab5 = ($grades[20]/60*60+40);
             $lab6 = ($grades[21]/60*60+40);
-
             $lab = ($lab5 + $lab6)/2;
 
             $documentation = ($grades[23]/40*60+40);
@@ -179,9 +167,6 @@
             
             //Formula for getting  grade
             $finalG = round(($sw_Ass * 0.1 ) + ($lab*0.1) + (($quiz)*0.3) + ($labExam*0.1) + ($writtenExam * .4),2);
-
-     
-
             $finalGrade = round(($prelimG * .33) + ($midG * .33) + ($finalG * .34),2);
 
                         
@@ -217,34 +202,26 @@
                     $gpa = 5.00;
                     break;
                 }
-
                 echo
                 "
                 <tr>
-                <td>".$count."</td>".
-                "<td>".$grades[0]."</td>".
-                "<td>".$grades[1]."</td>".
-                "<td>".$grades[2]."</td>".
-                "<td>".$prelimG."</td>".
-                "<td>".$midG."</td>".
-                "<td>".$finalG."</td>".
-                "<td>".$finalGrade."</td>".
-                "<td><b>".$gpa."</td>".
-                "</tr>";
+                <td>$count</td>
+                <td>$grades[0]</td>
+                <td>$grades[1]</td>
+                <td>$grades[2]</td>
+                <td>$prelimG</td>
+                <td>$midG</td>
+                <td>$finalG</td>
+                <td>$finalGrade</td>
+                <td><b>$gpa</td>
+                </tr>"    
+                ;
                 $count++;
-           
-           
         }
-   
-
-
-  
       ?>
-
     </table>
     <footer>
-             <p style="text-align: center;">&COPY Copyright <b>Prelim Exam</b> All rights reserved</p>
-        </footer>
-     
+        <p style="text-align: center;">&COPY Copyright <b>Prelim Exam</b> All rights reserved</p>
+    </footer>
 </body>
 </html>
